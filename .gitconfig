@@ -1,0 +1,15 @@
+[user]
+	name = Przemysław Raczyński
+	email = przemyslaw.raczynski@unitygroup.com
+[rerere]
+	enabled = true
+[alias]
+	stl = !git status && git log -n1
+	ll = !git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit	
+[blame]
+	markIgnoredLines = true
+	markUnblamableLines = true
+[core]
+	editor = code --wait
+[pull]
+	ff = only
