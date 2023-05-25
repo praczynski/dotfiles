@@ -1,0 +1,54 @@
+# Inserts a blank line between shell prompts
+add_newline = true
+
+format = "$directory$sudo$character$git_branch$git_status$git_state$git_commit"
+right_format = "$cmd_duration $time"
+
+[character] # The name of the module we are configuring is "character"
+success_symbol = "[➜](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
+error_symbol = "[➜](bold red)"
+
+[time]
+disabled = false
+time_format = "%T"
+format = "🕙[$time ](bold blue)"
+
+[sudo]
+disabled = false
+style = "bold green"
+symbol = "💪"
+format = "[<SUDO>$symbol]($style)"
+
+[git_branch]
+symbol = " "
+truncation_length = 24
+truncation_symbol = ".."
+
+[git_commit]
+disabled = false
+commit_hash_length = 4
+tag_symbol = "🔖 "
+
+[git_status]
+disabled = false
+format = "$conflicted$deleted$renamed$modified$staged$untracked$ahead$behind$diverged$renamed"
+conflicted = "🏳"
+ahead = "🏎💨⇡${count}"
+behind = "😰${count}"
+diverged = "😵⇡${ahead_count}⇣${behind_count}"
+up_to_date = "✓"
+untracked = "🤷"
+stashed = "📦"
+modified = "📝"
+staged = '[++\($count\)](green)'
+renamed = "👅"
+deleted = "🗑"
+
+[git_state]
+disabled = false
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = "[🍒 PICKING](bold red)"
+
+[cmd_duration]
+min_time = 1000
+format = "took [$duration](bold yellow)"
