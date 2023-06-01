@@ -143,9 +143,6 @@ alias cp="xcp"
 alias find="fd"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH="/home/linuxbrew/.linuxbrew/opt/openjdk@11/bin:$PATH"
-
-if [ -e /home/przemek/.nix-profile/etc/profile.d/nix.sh ]; then . /home/przemek/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
 function kredki {
     $HOME/aws-credentials/aws_sso_login.py $1
