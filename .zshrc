@@ -99,6 +99,7 @@ antigen apply
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(aws git sudo docker docker-compose command-not-found ubuntu zsh-autosuggestions zsh-syntax-highlighting)
 
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -125,7 +126,11 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 alias zshconfig="nano ~/.zshrc"
-# alias ohmyzsh="nano ~/.oh-my-zsh"
+alias cat="bat"
+alias l="exa -al"
+alias ll="exa"
+alias ls="exa"
+alias find="fd"
 
 eval "$(starship init zsh)"
 
@@ -133,14 +138,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/home/linuxbrew/.linuxbrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-eval "$(mcfly init zsh)"
-
-alias cat="bat"
-alias l="exa -al"
-alias ll="exa"
-alias ls="exa"
-alias cp="xcp"
-alias find="fd"
+# eval "$(mcfly init zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
