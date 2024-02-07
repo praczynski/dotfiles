@@ -127,9 +127,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconfig="nano ~/.zshrc"
 alias cat="bat"
-alias l="exa -al"
-alias ll="exa"
-alias ls="exa"
+alias l="eza -al"
+alias ll="eza"
+alias ls="eza"
 alias find="fd"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/starship init zsh --print-full-init)"

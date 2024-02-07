@@ -13,3 +13,5 @@
 	editor = code --wait
 [pull]
 	ff = only
+[push]
+	autoSetupRemote = true
