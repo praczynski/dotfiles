@@ -143,6 +143,6 @@ eval "$(zoxide init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 function kredki {
-    $HOME/aws-credentials/aws_sso_login.py $1
+    $HOME/code/aws-credentials/aws_sso_login.py $1
     export AWS_PROFILE=$1
 }
